@@ -21,4 +21,19 @@ apply(…pluginInstances: (AnyPlugin|function)[])
 applyPlugins*(name:string, …)：
 - 这个就是发射一个事件，事件名称由参数 name 指定，这个事件也即是系统已有的事件或者上面 plugin(name:string, handler:function) 参数指定的事件，
 如果是你自定义的事件则触发对应的 handler。
+- applyPlugins* 代表几种不同类型的方法：
+applyPluginsWaterfall， 
+applyPluginsAsync，
+applyPluginsBailResult，
+applyPluginsAsyncWaterfall，
+applyPluginsAsyncSeries，
+applyPluginsParallel，
+applyPluginsParallelBailResult
+
+(官方原话)不同的 applyPlugins* 方法对应以下使用情况:
+串行执行插件
+并行执行插件
+插件一个接一个的执行,并且每个插件接收上一个插件的返回值(瀑布)
+异步执行插件
+保护模式终止插件执行: 一旦某个插件返回 non-undefined，会退出运行流程并返回 这个插件的返回值。这看起来像 EventEmitter 的 once()，但他们是完全不同的。
 
