@@ -10,7 +10,7 @@ webpack 描述如何写插件的文档并不完善，并且部分地方解释的
 Tapable 有四组成员函数:
 
 plugin(name:string, handler:function) 
- -注册一个事件，名字由 name 参数指定，回调函数由 handler 指定，如果名字是系统没有的，则这个事件是自定义的，反之是系统定义好的事件。
+- 注册一个事件，名字由 name 参数指定，回调函数由 handler 指定，如果名字是系统没有的，则这个事件是自定义的，反之是系统定义好的事件。
  当这个指定的事件触发则调用回掉函数，事件的触发可以由下面的 applyPlugins* 来直接触发。
  
 apply(…pluginInstances: (AnyPlugin|function)[])
