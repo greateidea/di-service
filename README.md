@@ -17,9 +17,7 @@ apply(…pluginInstances: (AnyPlugin|function)[])
 - AnyPlugin 是 AbstractPlugin 的子类，或者是一个有 apply 方法的类（或者，少数情况下是一个对象），或者只是一个有注册代码的函数。(官方原话)
 
 - apply 的源码：
-
-- Tapable.prototype.apply = function apply() {
-
+Tapable.prototype.apply = function apply() {
 		for(var i = 0; i < arguments.length; i++) {
 		arguments[i].apply(this);
 	}
