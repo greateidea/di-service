@@ -15,8 +15,14 @@ plugin(name:string, handler:function)
  
 apply(…pluginInstances: (AnyPlugin|function)[])
 - AnyPlugin 是 AbstractPlugin 的子类，或者是一个有 apply 方法的类（或者，少数情况下是一个对象），或者只是一个有注册代码的函数。(官方原话)
-这个函数的作用是直接向 tapable 实例中注册你写的插件类，这些插件类都有一个 apply 方法，也就是说这个你写的插件类就是官方说的需要在原型上写个 apply 方法的类。
-猜测这些插件类会挨个被 apply(…pluginInstances: (AnyPlugin|function)[]) 这个东西调用一遍，加入实例中。
+
+- apply 的源码：
+Tapable.prototype.apply = function apply() {
+	for(var i = 0; i < arguments.length; i++) {
+		arguments[i].apply(this);
+	}
+};
+- 可见你传入的方法数组会直接被遍历调用。
 
 applyPlugins*(name:string, …)：
 - 这个就是发射一个事件，事件名称由参数 name 指定，这个事件也即是系统已有的事件或者上面 plugin(name:string, handler:function) 参数指定的事件，
