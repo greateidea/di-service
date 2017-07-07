@@ -29,6 +29,7 @@ applyPlugins*(name:string, …)：
 - 这个就是发射一个事件，事件名称由参数 name 指定，这个事件也即是系统已有的事件或者上面 plugin(name:string, handler:function) 参数指定的事件，
 如果是你自定义的事件则触发对应的 handler。
 - applyPlugins* 代表几种不同类型的方法：
+- applyPlugins，
 - applyPluginsWaterfall， 
 - applyPluginsAsync，
 - applyPluginsBailResult，
