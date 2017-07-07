@@ -18,6 +18,7 @@ apply(…pluginInstances: (AnyPlugin|function)[])
 
 - apply 的源码：
 Tapable.prototype.apply = function apply() {
+
 		for(var i = 0; i < arguments.length; i++) {
 		arguments[i].apply(this);
 	}
