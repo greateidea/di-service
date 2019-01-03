@@ -1,8 +1,19 @@
 {
-<<<<<<< HEAD
   "name": "my-app",
   "version": "0.1.0",
+  "description": "this is my app",
   "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greateidea/myapp.git"
+  },
+  "author": "Orange",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greateidea/myapp/issues"
+  },
+  "homepage": "https://github.com/greateidea/myapp#readme",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -23,23 +34,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-=======
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "this is my app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/greateidea/myapp.git"
-  },
-  "author": "Orange",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/greateidea/myapp/issues"
-  },
-  "homepage": "https://github.com/greateidea/myapp#readme"
->>>>>>> 4031c2f59ee602dfb8a7b079508b3f7fb632fec9
 }
