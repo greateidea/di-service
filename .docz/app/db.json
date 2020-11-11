@@ -1,0 +1,61 @@
+{
+  "config": {
+    "title": "Di Service",
+    "description": "this is my app",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": false,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {
+      "mode": "dark"
+    },
+    "separator": "-",
+    "typescript": true,
+    "theme": "/Users/a18011405704/Desktop/code/di-service/node_modules/docz-theme-umi/es/index.js",
+    "base": "/",
+    "plugins": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "props": [
+    {
+      "key": "src/test/DITest.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DITest",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "src/index.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/",
+        "id": "6576455a124f9aaefd860597f03a8fe4",
+        "filepath": "src/index.mdx",
+        "link": "https://github.com/greateidea/di-service/edit/master/src/index.mdx",
+        "slug": "src-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "dicomponent",
+            "depth": 1,
+            "value": "DIComponent"
+          }
+        ]
+      }
+    }
+  ]
+}

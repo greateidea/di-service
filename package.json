@@ -1,29 +1,42 @@
 {
-  "name": "my-app",
+  "name": "di-service",
   "version": "0.1.0",
   "description": "this is my app",
   "private": true,
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greateidea/myapp.git"
+    "url": "git+https://github.com/greateidea/di-service.git"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Orange",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/greateidea/myapp/issues"
+    "url": "https://github.com/greateidea/di-service/issues"
   },
-  "homepage": "https://github.com/greateidea/myapp#readme",
+  "homepage": "https://github.com/greateidea/di-service#readme",
   "dependencies": {
+    
+  },
+  "devDependencies": {
+    "father": "^2.29.10",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-dom": "^16.7.0"
+  },
+  "peerdevDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "doc:dev": "father doc dev",
+    "doc:build": "father doc build",
+    "lib:build": "father build"
   },
   "eslintConfig": {
     "extends": "react-app"
