@@ -16,6 +16,15 @@
     "name": "bigorange",
     "email": "576144276@qq.com"
   },
+  "keywords": [
+    "dependency injection",
+    "dependency injection in typescript",
+    "dependency injection in react",
+    "service in react",
+    "service",
+    "tyscript service",
+    "react service"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/greateidea/di-service/issues"
