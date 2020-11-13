@@ -1,9 +1,10 @@
 {
-  "name": "di-service",
+  "name": "@orange/di-service",
   "version": "0.1.0",
-  "description": "this is my app",
+  "description": "DI build by typesrcipt, make your life easy",
   "private": true,
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/greateidea/di-service.git"
@@ -11,14 +12,18 @@
   "files": [
     "dist"
   ],
-  "author": "Orange",
+  "authors": {
+    "name": "bigorange",
+    "email": "576144276@qq.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/greateidea/di-service/issues"
   },
   "homepage": "https://github.com/greateidea/di-service#readme",
   "dependencies": {
-    
+    "di-service": "./di-service-0.2.0.tgz",
+    "react-is": "^17.0.1"
   },
   "devDependencies": {
     "father": "^2.29.10",
@@ -26,17 +31,12 @@
     "react-dom": "^16.7.0"
   },
   "peerdevDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+ 
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "doc:dev": "father doc dev",
     "doc:build": "father doc build",
-    "lib:build": "father build"
+    "build": "father build"
   },
   "eslintConfig": {
     "extends": "react-app"

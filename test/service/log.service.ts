@@ -1,6 +1,8 @@
-import { Injectable } from '../../di/decorate/injector';
-import { Service } from '../../di/decorate/service';
+import { Injectable } from '../../src/di/decorate/injector';
+import { Service } from '../../src/di/decorate/service';
 import { Ilog2 } from './serviceInterface/log2';
+
+// import { Injectable, Service } from 'di-service'; // npm pack test
 
 console.log('[Service Log] Load');
 

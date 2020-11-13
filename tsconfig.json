@@ -21,7 +21,6 @@
     "mock/**/*",
     "src/**/*",
     "config/**/*",
-    ".umirc.ts",
-    "typings.d.ts", "umiPlugin"
+    "typings.d.ts"
   ]
 }

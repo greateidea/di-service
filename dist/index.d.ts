@@ -1,5 +1,2 @@
-import React from 'react';
-export default class DIComponent extends React.Component {
-    render(): JSX.Element;
-}
-export declare const Score = 211;
+export { Inject, InjectToClass, InjectToFunction, Service } from './di/decorate/service';
+export { Injectable, RegisterServiceByProvider } from './di/decorate/injector';
