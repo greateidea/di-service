@@ -34,7 +34,7 @@ RegisterServiceByProvider(() => LogService, 'Class');
 
 
 
-# using the service in you component
+# using the service in your component
 import React from 'react';
 import { Service } from '@orange/di-service';
 
