@@ -14,6 +14,8 @@ Let's see how to use it:
 
 ```js
 # implement a class type service
+import { RegisterServiceByProvider } from '@orange/di-service';
+
 export default class LogService {
   constructor() {}
 
@@ -22,22 +24,11 @@ export default class LogService {
   }
 }
 
-
-
-# before using it, we should register the service
-# the best time of register services is the start of your app
-
-import { RegisterServiceByProvider } from '@orange/di-service';
-import LogService from '...';
-
 RegisterServiceByProvider(() => LogService, 'Class');
 
 
 
 # using the service in your component
-import React from 'react';
-import { Service } from '@orange/di-service';
-
 @Service(['LogService'])
 class LogComponent extendes React.Component {
     constructor(props, {}, private service) {
