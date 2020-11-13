@@ -4,7 +4,7 @@ Dependency Injection
 
 ## Installation
 ```sh
-npm @orange/di-sevice
+npm i @orange/di-sevice
 ```
 ### Using Inject Services To Your Components
 
