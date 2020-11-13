@@ -9,10 +9,11 @@ npm @orange/di-sevice
 ### Using Inject Services To Your Components
 
 Inject services into your components, the service could be a Class, Fuction, String, Number, Boolean.
+
 Let's see how to use it:
 
 ```bash
-# register a class type service
+# implement a class type service
 export default class LogService {
   constructor() {}
 
