@@ -4,7 +4,7 @@ Dependency Injection
 
 ## Installation
 ```sh
-npm i @orange/di-sevice
+npm i @orange/di-service
 ```
 ### Using Inject Services To Your Components
 
@@ -22,6 +22,8 @@ export default class LogService {
   }
 }
 
+
+
 # before using it, we should register the service
 # the best time of register services is the start of your app
 
@@ -29,6 +31,8 @@ import { RegisterServiceByProvider } from '@orange/di-service';
 import LogService from '...';
 
 RegisterServiceByProvider(() => LogService, 'Class');
+
+
 
 # using the service in you component
 import React from 'react';
