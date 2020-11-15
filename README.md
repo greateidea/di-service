@@ -6,7 +6,7 @@ Dependency Injection
 ```sh
 npm i @orange/di-service
 ```
-### Using Inject Services To Your Component
+### Using Inject Service To Your Component
 
 Inject services into your components, the service could be a Class, Fuction, String, Number, Boolean.
 
@@ -45,17 +45,18 @@ using `RegisterServiceByProvider` to register a service
 
 ```js
 RegisterServiceByProvider(() => ClassService, 'Class');
-RegisterServiceByProvider(() => FunctionService, 'Function');
+RegisterServiceByProvider(() => (...params) => { console.log(...params); }, 'Function');
 RegisterServiceByProvider(() => 'I'm a service', 'Const', 'ServiceName');
 RegisterServiceByProvider(() => 211, 'Const', 'ServiceName');
 RegisterServiceByProvider(() => true, 'Const', 'ServiceName');
 ```
 
-when the service's type is 'Class' or 'Function', the default ServiceName is the class/function's name.
+when the service's type is 'Class' or 'Function', the default Service Name is the class/function's name.
 
-If you are using typescript, we also provide the decorate
+If you are using typescript, we are also provide a decorator
 ```js
 // service.js
+// NOTE: the decorator only can be used to decorate the class in typescripte
 import { Injectable } from '@orange/di-service';
 
 @Injectable()
@@ -65,16 +66,16 @@ Class LogService {
   }
 }
 ```
-but you should import the service module before using this service.
+but you should import/require the service module before using this service.
 ```js
 // app.js
 import 'service'; // make the decorate work first
 ```
 
 ## Inject Service
-we provide `InjectToFunction` `InjectToClass` to inject services to your component
+we provide `InjectToFunction` `InjectToClass` to inject the service to your component
 
-Note the service object is always at the [last position] of constructor/function arguments
+Note the service object is always at the [last position] of constructor/function's arguments
 
 ```js
 import { InjectToFunction } from '@orange/di-service';
@@ -86,7 +87,7 @@ const ComponentWithService = (props, services) => {
 export default InjectToFunction(['LogService', ...])(ComponentWithService);
 ```
 
-If you are using typescript, we also provide the decorate `Service`
+If you are using typescript, we are also provide the decorator `Service`
 ```js
 import React from 'react';
 import { Service } from '@orange/di-service';
@@ -105,7 +106,7 @@ class ComponentWithService  extends React.Component {
 ```
 
 ## Inject Service In React Component
-we provide the decorate `Inject` funtion, which don't need to distinguish whether the service type is ‘function’ or 'class'
+we provide the decorate `Inject` funtion, which don't need to distinguish whether the service is a ‘function’ or 'class'
 ```js
 export default Inject(['serviceName', ...])(ReactComponent);
 ```
